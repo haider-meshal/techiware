@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+    web:
+        image: odoo:15.0
+        container_name: odoo_15
+        depends_on:
+            - db
+        ports:
+            - 8069:8069
+        volumes:
+            - ${PWD}/dev-no-source/config:/etc/odoo
+            - ${PWD}/extra-addons:/mnt/extra-addons
+        environment:
+            - HOST=db
+            - USER=odoo15
+            - PASSWORD=odoo15
+        command: odoo -c /etc/odoo/odoo.conf -d odoo --dev=all
+    db:
+        image: postgres:13
+        container_name: postgres_13
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_PASSWORD=odoo15
+            - POSTGRES_USER=odoo15
+            - POSTGRES_DB=postgres

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - '8080:80'
+    network_mode: bridge
+    external_links:
+      - postgres:postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'admin@example.com'
+      PGADMIN_DEFAULT_PASSWORD: 'admin'

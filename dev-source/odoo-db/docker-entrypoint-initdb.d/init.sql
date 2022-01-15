@@ -1,0 +1,5 @@
+CREATE DATABASE odoo
+    WITH
+    OWNER = odoo
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
