@@ -6,12 +6,16 @@ This is my first TODO module for odoo.
 --------------------------------------------------------------------------------
 ```bash
 git clone git@github.com:haider-meshal/techiware.git odoo-env
-cd odoo-env
-git clone https://github.com/odoo/odoo.git repo-15
 ```
 
 ### Development from src (Run it locally: needs to setup pythons and dependencies)
 --------------------------------------------------------------------------------
+Get odoo source:
+```bash
+cd odoo-env
+git clone https://github.com/odoo/odoo.git repo-15
+```
+
 Run DB server:
 ```bash
 docker-compose -f ./dev-source/odoo-db/server.yaml up -d
@@ -34,6 +38,7 @@ Run run odoo and init:
 ### Development without src (No python and dependencies needed)
 -------------------------------------------------------------
 ```bash
+cd odoo-env
 docker-compose -f ./dev-no-source/docker-compose.yaml up -d
 docker-compose -f ./dev-no-source/docker-compose.yaml stop
 docker-compose -f ./dev-no-source/docker-compose.yaml down
