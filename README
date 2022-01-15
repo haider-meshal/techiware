@@ -2,25 +2,31 @@ This is my first TODO module for odoo.
 
 ![Screenshot](TODO.png)
 
-# (1) Development from src (Run it locally: needs to setup pythons and dependencies)
+# Development from src (Run it locally: needs to setup pythons and dependencies)
 --------------------------------------------------------------------------------
-- cd odoo (root folder)
-- Run DB server:
--   docker-compose -f ./dev-source/odoo-db/server.yaml up -d
--   docker-compose -f ./dev-source/odoo-db/server.yaml stop
--   docker-compose -f ./dev-source/odoo-db/server.yaml down
+## Run DB server:
+```vim
+docker-compose -f ./dev-source/odoo-db/server.yaml up -d
+docker-compose -f ./dev-source/odoo-db/server.yaml stop
+docker-compose -f ./dev-source/odoo-db/server.yaml down
+```
 
-   **OPTIONAL**
-- Run DB client:
--   docker-compose -f ./dev-source/odoo-db/client.yaml up -d
--   docker-compose -f ./dev-source/odoo-db/client.yaml stop
--   docker-compose -f ./dev-source/odoo-db/client.yaml down
+## [Optional] Run DB client:
+```vim
+docker-compose -f ./dev-source/odoo-db/client.yaml up -d
+docker-compose -f ./dev-source/odoo-db/client.yaml stop
+docker-compose -f ./dev-source/odoo-db/client.yaml down
+```
 
-- Run odoo from source code (This is odoo git clone)
--   ./repo-15/odoo-bin -c ./dev-source/odoo.conf -i base
+## Run run odoo and init
+```vim
+./repo-15/odoo-bin -c ./dev-source/odoo.conf -i base
+```
 
-# (2) Development without src (No python and dependencies needed)
+# Development without src (No python and dependencies needed)
 -------------------------------------------------------------
--   docker-compose -f ./dev-no-source/docker-compose.yaml up -d
--   docker-compose -f ./dev-no-source/docker-compose.yaml stop
--   docker-compose -f ./dev-no-source/docker-compose.yaml down
+```vim
+docker-compose -f ./dev-no-source/docker-compose.yaml up -d
+docker-compose -f ./dev-no-source/docker-compose.yaml stop
+docker-compose -f ./dev-no-source/docker-compose.yaml down
+```
