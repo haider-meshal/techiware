@@ -2,7 +2,7 @@ This is my first TODO module for odoo.
 
 ![Screenshot](TODO.png)
 
-## Development from src (Run it locally: needs to setup pythons and dependencies)
+### Development from src (Run it locally: needs to setup pythons and dependencies)
 --------------------------------------------------------------------------------
 Run DB server:
 ```bash
@@ -23,7 +23,7 @@ Run run odoo and init:
 ./repo-15/odoo-bin -c ./dev-source/odoo.conf -i base
 ```
 
-## Development without src (No python and dependencies needed)
+### Development without src (No python and dependencies needed)
 -------------------------------------------------------------
 ```bash
 docker-compose -f ./dev-no-source/docker-compose.yaml up -d
