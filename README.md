@@ -2,6 +2,14 @@ This is my first TODO module for odoo.
 
 ![Screenshot](TODO.png)
 
+### Setup
+--------------------------------------------------------------------------------
+```bash
+git clone git@github.com:haider-meshal/techiware.git odoo-env
+cd odoo-env
+git clone https://github.com/odoo/odoo.git repo-15
+```
+
 ### Development from src (Run it locally: needs to setup pythons and dependencies)
 --------------------------------------------------------------------------------
 Run DB server:
